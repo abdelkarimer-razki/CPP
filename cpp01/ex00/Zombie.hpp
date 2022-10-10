@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 17:21:56 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 15:39:52 by aer-razk         ###   ########.fr       */
+/*   Created: 2022/10/10 14:59:42 by aer-razk          #+#    #+#             */
+/*   Updated: 2022/10/10 16:12:57 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-# define CONTACT_H
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 #include <iostream>
 #include <string>
-#include <iomanip>
 
-class	contact
+class Zombie
 {
 	private:
-		std::string	first_name;
-		std::string	last_name;
-		std::string	nickname;
-		std::string	phone_number;
-		std::string	darkest_secret;
+		std::string name;
 	public:
-		contact();
-		int		fill();
-		~contact();
-		int		showinfo();
-		void	showallinfo(int i);
+		void	announce(void);
+		Zombie	*newZombie(std::string name);
+		void	randomChump(std::string name);
 };
 
 #endif

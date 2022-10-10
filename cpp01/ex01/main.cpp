@@ -5,37 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 17:18:09 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 15:46:03 by aer-razk         ###   ########.fr       */
+/*   Created: 2022/10/10 16:13:03 by aer-razk          #+#    #+#             */
+/*   Updated: 2022/10/10 17:00:04 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Zombie.hpp"
 
 int main(void)
 {
-	phonebook a;
-	std::string input;
-	a.set_index(0);
-	while (1)
-	{
-		std::cout << "Enter ADD, SEARCH or EXIT: ";
-		getline(std::cin, input);
-		if (std::cin.eof())
-			break ;
-		if (input == "EXIT")
-			break;
-		else if (input == "ADD")
-		{
-			if (a.addcontact() == -1)
-				break ;
-		}
-		else if (input == "SEARCH")
-		{
-			if (a.searchcontact() == -1)
-				break ;
-		}
-		else
-			std::cout << "Invalid command" << std::endl;
-	}
+	Zombie	a;
+	Zombie	*b;
+
+	b = a.zombieHorde(10, "karim");
+	delete[] (b);
 }

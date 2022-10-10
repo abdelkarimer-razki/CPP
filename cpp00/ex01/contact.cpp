@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:19:27 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 13:33:55 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:40:33 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,9 @@ void	contact::showallinfo(int i)
 			std::cout << "|" << std::setw(10) << this->nickname;
 		std::cout << std::endl;
 	}
+}
+
+contact::~contact()
+{
+	std::cout << "object destructed\n"; 
 }
