@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:26:53 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 18:59:27 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:37:03 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	HumanB
 {
 	private:
-		Weapon		&my_weapon;
+		Weapon		*my_weapon;
 		std::string	name;
 	public:
 		HumanB();

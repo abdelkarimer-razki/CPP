@@ -1,12 +1,12 @@
-NAME = Weapon
+NAME = replacer
 
 CFLAGS = -Wall -Werror -Wextra 
 
 CC = g++
 
-FILES =  main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+FILES = main.cpp replacer.cpp
 
-HEADERS = HumanA.hpp HumanB.hpp Weapon.hpp
+HEADERS = replacer.hpp
 
 OBJS = $(FILES:.c=.o)
 

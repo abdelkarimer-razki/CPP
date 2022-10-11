@@ -1,12 +1,12 @@
-NAME = Weapon
+NAME = Harl
 
 CFLAGS = -Wall -Werror -Wextra 
 
 CC = g++
 
-FILES =  main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+FILES = main.cpp Harl.cpp
 
-HEADERS = HumanA.hpp HumanB.hpp Weapon.hpp
+HEADERS = Harl.hpp
 
 OBJS = $(FILES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:26:56 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 18:56:22 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:10:29 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class	HumanA
 		Weapon		&my_weapon;
 		std::string	name;
 	public:
-		HumanA();
 		HumanA(std::string name, Weapon &my_weapon);
 		void	attack(void);
 };

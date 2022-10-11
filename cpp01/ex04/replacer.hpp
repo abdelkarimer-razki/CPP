@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   replacer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 17:26:55 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/11 11:25:19 by aer-razk         ###   ########.fr       */
+/*   Created: 2022/10/11 11:28:01 by aer-razk          #+#    #+#             */
+/*   Updated: 2022/10/11 18:34:14 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#ifndef REPLACER_HPP
+#define REPLACER_HPP
+#include <iostream>
+#include <string>
+#include <fstream>
 
-void	HumanB::attack(void)
+class	replacer
 {
-	if(this->my_weapon == nullptr)
-		return ;
-	std::cout << this->name << " attacks with their " << this->my_weapon->getType() << std::endl;
-}
-
-HumanB::HumanB()
-{
-}
-
-HumanB::HumanB(std::string name)
-{
-	this->name = name;
-}
-
-void	HumanB::setWeapon(Weapon &weapon1)
-{
-	this->my_weapon = &weapon1;
-}
+	private:
+		std::string	filename;
+		std::string	s1;
+		std::string	s2;
+	public:
+		replacer(std::string filename, std::string s1, std::string s2);
+		int	open_read();
+		int	errors(int i);
+};
+#endif

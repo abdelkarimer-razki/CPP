@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 17:26:55 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/11 11:25:19 by aer-razk         ###   ########.fr       */
+/*   Created: 2022/10/11 11:27:56 by aer-razk          #+#    #+#             */
+/*   Updated: 2022/10/11 15:48:35 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#include "replacer.hpp"
 
-void	HumanB::attack(void)
+int	main(int arc, char **arg)
 {
-	if(this->my_weapon == nullptr)
-		return ;
-	std::cout << this->name << " attacks with their " << this->my_weapon->getType() << std::endl;
-}
-
-HumanB::HumanB()
-{
-}
-
-HumanB::HumanB(std::string name)
-{
-	this->name = name;
-}
-
-void	HumanB::setWeapon(Weapon &weapon1)
-{
-	this->my_weapon = &weapon1;
+	if (arc == 4)
+	{
+		replacer rp(arg[1], arg[2], arg[3]);
+		return (rp.open_read());
+	}
+	else
+	{
+		std::cerr << "Wrong number of args : <filename> <string1> <string2>" << std::endl;
+		return (1);
+	}
 }

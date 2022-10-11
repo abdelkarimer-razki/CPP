@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:21:56 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 15:39:52 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:18:21 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class	contact
 	public:
 		contact();
 		int		fill();
-		~contact();
 		int		showinfo();
 		void	showallinfo(int i);
 };

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:26:49 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 18:51:53 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:21:38 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 std::string	Weapon::getType(void)
 {
-	return (*this->type);
+	return (this->type);
 }
 
 void	Weapon::setType(std::string type)
 {
-	this->type = &type;
+	this->type = type;
 }
 
 Weapon::Weapon()
@@ -28,5 +28,5 @@ Weapon::Weapon()
 
 Weapon::Weapon(std::string type)
 {
-	this->type = &type;
+	this->type = type;
 }

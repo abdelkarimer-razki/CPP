@@ -1,4 +1,4 @@
-NAME = Zombie
+NAME = Brain
 
 CFLAGS = -Wall -Werror -Wextra 
 
@@ -6,16 +6,14 @@ CC = g++
 
 FILES =  main.cpp
 
-HEADERS = Zombie.hpp
-
 OBJS = $(FILES:.c=.o)
 
-%.o : %.c $(HEADER)
+%.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
 
-$(NAME) : $(OBJS) $(HEADER)
+$(NAME) : $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	clear
 
