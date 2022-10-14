@@ -8,7 +8,7 @@ FILES = main.cpp Fixed.cpp
 
 HEADERS = Fixed.hpp
 
-OBJS = $(FILES:i=.o)
+OBJS = $(FILES:.cpp=.o)
 
 %.o : %.cpp
 	$(CC) $(CFLAGS) -c $<

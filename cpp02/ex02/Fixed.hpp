@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:31:18 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/14 11:29:20 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/14 13:19:44 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,19 @@ class Fixed
 		bool	operator>=(const Fixed &a);
 		bool	operator==(const Fixed &a);
 		bool	operator!=(const Fixed &a);
-		Fixed	operator+(const Fixed &a);
+		Fixed	&operator+(const Fixed &a);
 		Fixed	&operator/(const Fixed &a);
 		Fixed	&operator-(const Fixed &a);
 		Fixed	&operator*(const Fixed &a);
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
 		float toFloat( void ) const;
 		static Fixed	&min(Fixed &a, Fixed &b);
 		static Fixed	&max(Fixed &a, Fixed &b);
-		static Fixed	&min(const Fixed &a, const Fixed &b);
-		static Fixed	&max(const Fixed &a, const Fixed &b);
+		static Fixed const &min(const Fixed &a, const Fixed &b);
+		static Fixed const &max(const Fixed &a, const Fixed &b);
 		int toInt( void ) const;
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
