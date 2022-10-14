@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:54:28 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/11 19:28:40 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/13 11:59:50 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	main(void)
 {
 	Harl x;
-	x.complain("INFO");
+	x.complain("ERROR");
 }

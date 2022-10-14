@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:19:27 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/11 12:18:26 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:11:59 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	contact::showallinfo(int i)
 	{
 		if ((int)this->first_name.length() - 10 > 0)
 			std::cout << std::setw(10) << i << "|" << this->first_name.substr(0, 9) << ".";
-		else			
+		else
 			std::cout << std::setw(10) << i << "|" << std::setw(10) << this->first_name;
 		if ((int)this->last_name.length() - 10 > 0)
 			std::cout << "|" << this->last_name.substr(0, 9) << ".";
