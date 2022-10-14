@@ -1,21 +1,21 @@
 NAME = Zombie
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-CC = g++
+CC = c++
 
 FILES = randomChump.cpp newZombie.cpp main.cpp Zombie.cpp
 
 HEADERS = Zombie.hpp
 
-OBJS = $(FILES:.c=.o)
+OBJS = $(FILES:.cpp=.o)
 
-%.o : %.c $(HEADER)
+%.o : %.cpp $(HEADERS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
 
-$(NAME) : $(OBJS) $(HEADER)
+$(NAME) : $(OBJS) $(HEADERS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	clear
 
@@ -24,7 +24,7 @@ clean :
 	clear
 
 fclean : clean
-	@rm -f $(NAME)
+	@rm -f $(OBJS)
 	clear
 
 re : fclean all

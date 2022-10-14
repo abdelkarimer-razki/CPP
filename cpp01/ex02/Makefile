@@ -1,14 +1,14 @@
 NAME = Brain
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-CC = g++
+CC = c++
 
 FILES =  main.cpp
 
-OBJS = $(FILES:.c=.o)
+OBJS = $(FILES:.cpp=.o)
 
-%.o : %.c
+%.o : %.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
@@ -22,7 +22,7 @@ clean :
 	clear
 
 fclean : clean
-	@rm -f $(NAME)
+	@rm -f $(OBJS)
 	clear
 
 re : fclean all
