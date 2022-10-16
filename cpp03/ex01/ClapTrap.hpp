@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:07:30 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/14 14:56:00 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:13:18 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string name;
 		int	hitpoint;
 		int	energypoint;

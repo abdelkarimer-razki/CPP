@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:07:27 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/16 11:06:24 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:16:46 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-	ScavTrap a;
+	ScavTrap a("karim");
 	a.attack("hamid");
 	/*ClapTrap a("karim");
 	a.attack("hamid");

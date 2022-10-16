@@ -11,17 +11,21 @@ HEADERS = ClapTrap.hpp ScavTrap.hpp
 OBJS = $(FILES:.cpp=.o)
 
 %.o : %.cpp
-	$(CC) $(CFLAGS) -c $<
+	@$(CC) $(CFLAGS) -c $<
+	clear
 
 all : $(NAME)
 
 $(NAME) : $(OBJS) $(HEADERS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	clear
 
 clean : 
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	clear
 
 fclean : clean
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
+	clear
 
 re : fclean all
