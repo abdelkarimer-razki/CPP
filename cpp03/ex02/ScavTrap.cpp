@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:55:28 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/16 12:05:32 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:11:22 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ ScavTrap::ScavTrap()
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
+	std::cout << "ScavTrap parametrized constructor created" << std::endl;
 	this->hitpoint = 100;
 	this->energypoint = 50;
-	this->attackdamage = 20;
-	
-	std::cout << "ScavTrap parametrized constructor created" << std::endl;
+	this->attackdamage = 20;	
 }
 
 ScavTrap::~ScavTrap()
