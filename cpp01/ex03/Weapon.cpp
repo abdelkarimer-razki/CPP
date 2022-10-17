@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:26:49 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/11 11:21:38 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:24:10 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-std::string	Weapon::getType(void)
+std::string	const Weapon::getType(void) const
 {
 	return (this->type);
 }

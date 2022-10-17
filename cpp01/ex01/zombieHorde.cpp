@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:13:05 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 17:00:31 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:18:46 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Zombie	*Zombie::zombieHorde(int N, std::string name)
 			Zombies[i].name = name;
 			Zombies[i].announce();
 		}
-		return (Zombies);
+		return (&Zombies[0]);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:26:45 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/10 18:53:32 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:24:00 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class	Weapon
 		Weapon();
 		Weapon(std::string type);
 		void		setType(std::string type);
-		std::string	getType(void);
+		std::string	const getType(void) const;
 };
 #endif

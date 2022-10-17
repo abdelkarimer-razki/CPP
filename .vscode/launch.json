@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": true,
       "externalConsole": false,
-      "cwd": "/Users/aer-razk/Desktop/CPP",
-      "program": "/Users/aer-razk/Desktop/CPP/build/Debug/outDebug",
+      "cwd": "/Users/aer-razk/Desktop/CPP.0",
+      "program": "/Users/aer-razk/Desktop/CPP.0/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb"
     }
