@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:36:41 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:54:52 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,3 +93,10 @@ void	Bureaucrat::decrementGrade()
 		std::cout << e.what();
 	}
 }
+
+std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)
+{
+	o << a.getName() << ", bureaucrat grade " << a.getRange();
+	return (o);
+}
+

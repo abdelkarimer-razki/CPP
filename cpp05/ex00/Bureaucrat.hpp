@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:34 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:36:52 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:54:48 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ class Bureaucrat
 			}
 	};
 };
+
+std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a);
 
 
 #endif
