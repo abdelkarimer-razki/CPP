@@ -2,7 +2,7 @@ NAME = Fixed
 
 CFLAGS = -Wall -Werror -Wextra 
 
-CC = g++
+CC = c++
 
 FILES = main.cpp Fixed.cpp
 

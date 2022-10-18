@@ -2,7 +2,7 @@ NAME = Harl
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-CC = g++
+CC = c++
 
 FILES = main.cpp Harl.cpp
 

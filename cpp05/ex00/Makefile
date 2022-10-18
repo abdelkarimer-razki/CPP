@@ -1,17 +1,18 @@
-NAME = replacer
+NAME = Bureaucrat
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 CC = c++
 
-FILES = main.cpp replacer.cpp
+FILES = main.cpp Bureaucrat.cpp
 
-HEADERS = replacer.hpp
+HEADERS = Bureaucrat.hpp
 
 OBJS = $(FILES:.cpp=.o)
 
-%.o : %.cpp $(HEADERS)
-	@$(CC) $(CFLAGS) -c $< -o $@
+%.o : %.cpp
+	@$(CC) $(CFLAGS) -c $<
+	clear
 
 all : $(NAME)
 

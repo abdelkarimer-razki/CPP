@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 18:46:58 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 12:45:18 by aer-razk         ###   ########.fr       */
+/*   Created: 2022/10/18 11:38:34 by aer-razk          #+#    #+#             */
+/*   Updated: 2022/10/18 13:05:38 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 #include <iostream>
 #include <string>
 
-class Animal
+class Bureaucrat
 {
-	protected:
-		std::string type;
+	private:
+		std::string	name;
+		int	range;
 	public:
-		Animal();
-		~Animal();
-		Animal(Animal const &a);
-		Animal &operator=(Animal const &a);
-		virtual void	makeSound() const;
-		std::string	getType() const;
+		Bureaucrat();
+		~Bureaucrat();
+		Bureaucrat(Bureaucrat const &a);
+		Bureaucrat &operator=(Bureaucrat const &a);
+		Bureaucrat(std::string name, int range);
+		std::string	getName() const;
+		int	getRange() const;
 };
 #endif
