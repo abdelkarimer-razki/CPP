@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:32 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:15:18 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:37:04 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main()
 {
-	Bureaucrat a;
+	Bureaucrat a("karim", 651651);
 	std::cout << "Bureaucrat A's range: " << a.getRange() << std::endl;
 }

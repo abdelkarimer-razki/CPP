@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:21:13 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:36:41 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ Bureaucrat::Bureaucrat(std::string name, int range):name(name)
 	try
 	{
 		if (range > 150)
-			throw GradeTooLowException();
+			throw Bureaucrat::GradeTooLowException();
 		else if (range < 1)
-			throw GradeTooHighException();
+			throw Bureaucrat::GradeTooHighException();
 		else
 			this->range = range;
 	}
@@ -69,7 +69,7 @@ void	Bureaucrat::incrementGrade()
 	try
 	{
 		if (range - 1 < 1)
-			throw GradeTooHighException();
+			throw Bureaucrat::GradeTooHighException();
 		else
 			this->range--;
 	}
@@ -84,7 +84,7 @@ void	Bureaucrat::decrementGrade()
 	try
 	{
 		if (range + 1 > 150)
-			throw GradeTooLowException();
+			throw Bureaucrat::GradeTooLowException();
 		else
 			this->range--;
 	}
