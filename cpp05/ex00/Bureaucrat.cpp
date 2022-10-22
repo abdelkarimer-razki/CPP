@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:54:52 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:52:23 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,13 @@ Bureaucrat::Bureaucrat():range(150)
 	std::cout << "Bureaucrat default constructor" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int range):name(name)
+Bureaucrat::Bureaucrat(std::string name, int range):name(name), range(range)
 {
 	std::cout << "Bureaucrat Parametrized constructor" << std::endl;
-	try
-	{
-		if (range > 150)
-			throw Bureaucrat::GradeTooLowException();
-		else if (range < 1)
-			throw Bureaucrat::GradeTooHighException();
-		else
-			this->range = range;
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what();
-		this->range = 150;
-	}
+	if (range > 150)
+		throw Bureaucrat::GradeTooLowException();
+	else if (range < 1)
+		throw Bureaucrat::GradeTooHighException();
 }
 
 Bureaucrat::~Bureaucrat()
@@ -66,32 +56,16 @@ Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &a)
 
 void	Bureaucrat::incrementGrade()
 {
-	try
-	{
-		if (range - 1 < 1)
-			throw Bureaucrat::GradeTooHighException();
-		else
-			this->range--;
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what();
-	}
+	this->range--;
+	if (this->range < 1)
+		throw Bureaucrat::GradeTooHighException();
 }
 
 void	Bureaucrat::decrementGrade()
 {
-	try
-	{
-		if (range + 1 > 150)
-			throw Bureaucrat::GradeTooLowException();
-		else
-			this->range--;
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what();
-	}
+	this->range++;
+	if (this->range > 150)
+		throw Bureaucrat::GradeTooLowException();
 }
 
 std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)

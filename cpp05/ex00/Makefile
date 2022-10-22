@@ -28,4 +28,7 @@ fclean : clean
 	@rm -f $(OBJS)
 	clear
 
+run :
+	@make re && ./$(NAME)
+
 re : fclean all

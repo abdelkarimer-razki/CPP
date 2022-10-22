@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:54:39 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/13 12:00:10 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/22 04:38:59 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	Harl::complain(std::string level)
 	std::string table[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	while (++i < 4 && table[i] != level);
-	(this->*declare[i])();
+	if (i < 4)
+		(this->*declare[i])();
 }
