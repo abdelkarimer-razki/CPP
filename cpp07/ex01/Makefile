@@ -10,7 +10,7 @@ NC=\033[0m
 
 FILES = main.cpp
 
-HEADERS = whatever.hpp
+HEADERS = iter.hpp
 
 OBJS = $(FILES:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:17:39 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 15:41:53 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:56:54 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,26 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+
+
+class Awesome
+{
+public:
+Awesome(void) : _n(0) {}
+Awesome(int n):_n(n) {}
+Awesome & operator= (Awesome & a) { _n = a._n; return *this; }
+bool operator==( Awesome const & rhs ) const { return (this->_n ==rhs._n); }
+bool operator!=( Awesome const & rhs ) const{ return (this->_n !=rhs._n); }
+bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+bool operator<( Awesome const & rhs ) const { return (this->_n <rhs._n); }
+bool operator>=( Awesome const & rhs ) const { return (this->_n >=rhs._n); }
+bool operator<=( Awesome const & rhs ) const { return (this->_n <=rhs._n); }
+int get_n() const { return _n; }
+private:
+int _n;
+};
+std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
+
 template< typename T > void swap(T &a, T &b)
 {
 	T *c = &a;
