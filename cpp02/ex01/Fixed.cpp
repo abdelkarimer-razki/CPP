@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:38:19 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/14 12:03:55 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:27:38 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,11 @@ Fixed::~Fixed()
 
 int	Fixed::getRawBits(void) const
 {
-	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->store);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	//std::cout << "setRawBits member function called" << std::endl;
 	this->store = raw;
 }
 

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:31:15 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/14 13:19:51 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/27 08:51:49 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,44 +70,32 @@ Fixed	&Fixed::operator/(const Fixed &a)
 
 bool	Fixed::operator>(const Fixed &a)
 {
-	if (this->getRawBits() > a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() > a.getRawBits());
 }
 
 bool	Fixed::operator<(const Fixed &a)
 {
-	if (this->getRawBits() < a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() < a.getRawBits());
 }
 
 bool	Fixed::operator<=(const Fixed &a)
 {
-	if (this->getRawBits() <= a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() <= a.getRawBits());
 }
 
 bool	Fixed::operator>=(const Fixed &a)
 {
-	if (this->getRawBits() >= a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() >= a.getRawBits());
 }
 
 bool	Fixed::operator==(const Fixed &a)
 {
-	if (this->getRawBits() == a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() == a.getRawBits());
 }
 
 bool	Fixed::operator!=(const Fixed &a)
 {
-	if (this->getRawBits() != a.getRawBits())
-		return (true);
-	return (false);
+	return (this->getRawBits() != a.getRawBits());
 }
 
 Fixed	&Fixed::operator++()
