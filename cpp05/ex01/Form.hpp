@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:57 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/19 15:56:17 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/24 09:44:11 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <iostream>
 #include <string>
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
