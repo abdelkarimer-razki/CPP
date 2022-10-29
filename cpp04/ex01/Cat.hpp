@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:49:19 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/17 13:07:53 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 13:57:45 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ class Cat:public Animal
 		~Cat();
 		Cat(Cat const &a);
 		Cat	&operator=(Cat const &a);
-		void	makeSound() const;
+		virtual void	makeSound() const;
 };
 #endif

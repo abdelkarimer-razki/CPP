@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:49:18 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/17 13:39:45 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:05:27 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ Cat	&Cat::operator=(Cat const &a)
 
 Cat::Cat(Cat const &a)
 {
-	*this = a;
+	std::cout << "Cat copy constructor\n";
+	this->type = a.type;
+	this->cbrain = new Brain();
+	*(this->cbrain) = *(a.cbrain);
 }
 
 void	Cat::makeSound() const

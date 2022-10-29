@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 12:00:24 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/16 12:13:36 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:18:50 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,18 @@ FragTrap::~FragTrap()
 void	FragTrap::highFivesGuys()
 {
 	std::cout << "positive high fives request" << std::endl;
+}
+
+FragTrap::FragTrap(FragTrap const &srap)
+{
+	*this = srap;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &srap)
+{
+	this->name = srap.name;
+	this->hitpoint = srap.hitpoint;
+	this->attackdamage = srap.attackdamage;
+	this->energypoint = srap.energypoint;
+	return (*this);
 }

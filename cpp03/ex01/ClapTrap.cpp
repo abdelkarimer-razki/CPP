@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:07:32 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/16 12:15:41 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:12:38 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap():hitpoint(10), energypoint(10), attackdamage(0)
+ClapTrap::ClapTrap():hitpoint(100), energypoint(50), attackdamage(20)
 {
 	std::cout << "ClapTrap constructor created" << std::endl;
 }

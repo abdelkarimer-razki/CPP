@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:49:24 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/17 11:28:48 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 13:58:36 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class Dog:public Animal
 		~Dog();
 		Dog(Dog const &a);
 		Dog	&operator=(Dog const &a);
-		void	makeSound() const;
+		virtual void	makeSound() const;
 };
 #endif

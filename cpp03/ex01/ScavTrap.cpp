@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:55:28 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/16 12:05:32 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:15:06 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ void	ScavTrap::attack(const std::string &target)
 		std::cout << "ScavTrap " << this->name << " has " << energypoint <<" energy points and, "<< hitpoint << " hitpoint!!" << std::endl;
 }
 
-/*ScavTrap::ScavTrap(ScavTrap const &srap)
+ScavTrap::ScavTrap(ScavTrap const &srap)
 {
+	std::cout << "ScavTrap copy constructor created" << std::endl;
 	*this = srap;
 }
 
@@ -54,7 +55,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &srap)
 	this->attackdamage = srap.attackdamage;
 	this->energypoint = srap.energypoint;
 	return (*this);
-}*/
+}
 
 void	ScavTrap::guardGate()
 {
