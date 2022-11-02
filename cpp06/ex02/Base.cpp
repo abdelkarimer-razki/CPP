@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:43:20 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 11:33:16 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:56:15 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 #include "B.hpp"
 #include "C.hpp"
 
-Base *Base::generate(void)
+Base *generate(void)
 {
-	Base*(Base::*declare[3])() = {&Base::create_a, &Base::create_b, &Base::create_c};
+	Base*(*declare[3])() = {&create_a, &create_b, &create_c};
 	int i = rand() % 3;
-	return ((this->*declare[i])());
+	return ((*declare[i])());
 }
 
-void Base::identify(Base* p)
+void identify(Base* p)
 {
 	A *a = dynamic_cast<A*>(p);
 	B *b = dynamic_cast<B*>(p);
@@ -35,7 +35,7 @@ void Base::identify(Base* p)
 		c->announce();
 }
 
-void Base::identify(Base& p)
+void identify(Base& p)
 {
 	try
 	{
@@ -57,17 +57,22 @@ void Base::identify(Base& p)
 	}
 }
 
-Base *Base::create_a()
+Base::~Base()
+{
+
+}
+
+Base *create_a()
 {
 	return (new A);
 }
 
-Base *Base::create_b()
+Base *create_b()
 {
 	return (new B);
 }
 
-Base *Base::create_c()
+Base *create_c()
 {
 	return (new C);
 }

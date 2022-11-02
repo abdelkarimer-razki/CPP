@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:43:25 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 11:26:31 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:55:33 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main()
 {
-	Base a;
-	Base *c = a.generate();
-	Base &d = *a.generate();
-	a.identify(c);
-	a.identify(d);
+	Base a = *generate();
+	Base *c = generate();
+	Base &d = *generate();
+	identify(c);
+	identify(d);
 }

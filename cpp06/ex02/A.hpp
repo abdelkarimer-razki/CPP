@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:43:17 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 11:31:52 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:42:16 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ class A:public Base
 {
 	public:
 		virtual void	announce();
+		virtual	~A();
 };
 #endif
