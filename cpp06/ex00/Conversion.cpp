@@ -6,11 +6,56 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:00:30 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 09:32:38 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 11:55:45 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
+
+
+Conversion::~Conversion()
+{
+	std::cout << "Conversion Destructor\n";
+}
+
+Conversion::Conversion():check(0)
+{
+	std::cout << "Conversion Constructor\n";
+}
+
+Conversion::Conversion(Conversion const &a)
+{
+	*this = a;
+}
+
+Conversion	&Conversion::operator=(Conversion const &a)
+{
+	this->check = a.check;
+	return (*this);
+}
+
+void	Conversion::check_points(char	*str)
+{
+	int i = -1;
+	int j = 0;
+
+	while (str[++i])
+		if (str[i] == '.')
+			j++;
+	if (j > 1)
+		throw std::exception();
+	i = -1;
+	while (str[++i])
+		if (!isnumber(str[i]) && str[i] != 'f' && str[i] != '.')
+			throw std::exception();
+	i = -1;
+	j = 0;
+	while (str[++i])
+		if (str[i] == 'f')
+			j++;
+	if (j > 1 || (str[strlen(str) - 1] != 'f' && j == 1))
+		throw std::exception();
+}
 
 bool	Conversion::check_double(char *str)
 {
@@ -150,8 +195,6 @@ void	Conversion::fill_char(char *str)
 	this->ini = static_cast<int>(str[0]);
 }
 
-Conversion::Conversion():check(0)
-{}
 
 bool	Conversion::check_lil(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:00:53 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/24 08:58:14 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 11:54:32 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ class Conversion
 		bool	check;
 	public:
 		Conversion();
+		~Conversion();
+		Conversion(Conversion const &a);
+		Conversion	&operator=(Conversion const &a);
+		void	check_points(char *str);
 		bool	check_lil(char *str);
 		bool	check_int(char *str);
 		bool	check_float(char *str);
