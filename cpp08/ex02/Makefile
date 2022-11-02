@@ -8,9 +8,9 @@ GREEN=\033[0;32m
 
 NC=\033[0m
 
-FILES = main.cpp Span.cpp
+FILES = main.cpp 
 
-HEADERS = Span.hpp
+HEADERS = MutantStack.hpp
 
 OBJS = $(FILES:.cpp=.o)
 
