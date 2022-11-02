@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:23 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 02:25:00 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 09:52:02 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm():target(""), s_grade(145), e_grade(137)
+PresidentialPardonForm::PresidentialPardonForm():target(""), s_grade(25), e_grade(5)
 {
 	std::cout << "PresidentialPardonForm Default Constructor" << std::endl;
 }
@@ -34,7 +34,7 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(PresidentialPardonForm
 	return (*this);
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target):target(target), s_grade(145), e_grade(137)
+PresidentialPardonForm::PresidentialPardonForm(std::string target):target(target), s_grade(25), e_grade(5)
 {
 	std::cout << "PresidentialPardonForm Parametrized Constructor" << std::endl;
 }

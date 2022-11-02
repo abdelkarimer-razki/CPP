@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:25 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 03:34:31 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 09:47:00 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm():target(""), s_grade(145), e_grade(137)
+RobotomyRequestForm::RobotomyRequestForm():target(""), s_grade(72), e_grade(45)
 {
 	std::cout << "RobotomyRequestForm Default Constructor" << std::endl;
 }
@@ -34,7 +34,7 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(RobotomyRequestForm const &a
 	return (*this);
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target):target(target), s_grade(145), e_grade(137)
+RobotomyRequestForm::RobotomyRequestForm(std::string target):target(target), s_grade(72), e_grade(45)
 {
 	std::cout << "RobotomyRequestForm Parametrized Constructor" << std::endl;
 }

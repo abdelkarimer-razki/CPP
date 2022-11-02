@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:34 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 08:39:47 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 09:41:28 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Form;
 class Bureaucrat
 {
 	private:
-		std::string	name;
+		const std::string	name;
 		int			range;
 	public:
 		Bureaucrat();
