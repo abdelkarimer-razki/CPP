@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 02:31:30 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:40:01 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,14 @@ void	Bureaucrat::signForm(Form &a) const
 		std::cout << this->name << " signed " << a.getName() << std::endl;
 	else
 		std::cout << this->name << " couldn’t sign " << a.getName() << " because grade is too low." << std::endl;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("grade is too high\n");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("grade is too low\n");
 }

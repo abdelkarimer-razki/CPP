@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:57 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 03:32:35 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:50:56 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Form
 		const int			e_grade;
 	public:
 		Form();
-		~Form();
+		virtual ~Form();
 		Form(Form const &a);
 		Form(std::string name, int s_grade, int e_grade);
 		Form		&operator=(Form const &a);
@@ -41,18 +41,12 @@ class Form
 	class GradeTooHighException:public std::exception
 	{
 		public:
-			virtual const char * what() const throw()
-			{
-				return ("grade is too high\n");
-			}
+			virtual const char * what() const throw();
 	};
 	class GradeTooLowException:public std::exception
 	{
 		public:
-			virtual const char * what() const throw()
-			{
-				return ("grade is too low\n");
-			}
+			virtual const char * what() const throw();
 	};
 };
 

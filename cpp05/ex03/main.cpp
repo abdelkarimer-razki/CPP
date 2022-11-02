@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:32 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 04:38:28 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/30 15:20:55 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,17 @@
 
 int main()
 {
-	Intern someRandomIntern;
-	Form* rrf;
-	rrf = someRandomIntern.makeForm("presintial pardon", "Bender");
+	try
+	{
+		Intern someRandomIntern;
+		Bureaucrat a;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("presinsdfgdsfgdsfrdon", "Bender");
+		rrf->beSigned(a);
+		delete (rrf);	
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "error\n";
+	}
 }

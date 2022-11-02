@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:34 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/18 18:54:48 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:39:00 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,12 @@ class Bureaucrat
 	class GradeTooHighException:public std::exception
 	{
 		public:
-			virtual const char * what() const throw()
-			{
-				return ("grade is too high\n");
-			}
+			virtual const char * what() const throw();
 	};
 	class GradeTooLowException:public std::exception
 	{
 		public:
-			virtual const char * what() const throw()
-			{
-				return ("grade is too low\n");
-			}
+			virtual const char * what() const throw();
 	};
 };
 

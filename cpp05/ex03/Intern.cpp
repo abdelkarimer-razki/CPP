@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 03:38:10 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 04:38:12 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/10/30 15:20:18 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Form	*Intern::makeForm(std::string f_form, std::string f_name)
 	while (++i < 3 && f_form != array[i]);
 	if (i < 3)
 		return ((this->*declare[i])(f_name));
-	return (NULL);
+	throw (std::exception());
 }
 
 Form	*Intern::createPres(std::string f_name)

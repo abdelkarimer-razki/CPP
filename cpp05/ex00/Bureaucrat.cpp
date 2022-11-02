@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/19 13:52:23 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:38:54 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,12 @@ std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)
 	return (o);
 }
 
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("grade is too high\n");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("grade is too low\n");
+}

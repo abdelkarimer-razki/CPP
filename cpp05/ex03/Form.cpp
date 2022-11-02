@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:55 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 02:32:50 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:51:11 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,14 @@ std::ostream	&operator<<(std::ostream &o, const Form &a)
 {
 	o << a.getName() << " Form." << std::endl << "Signed?: " << a.getSinged() << std::endl << "Execution grade: " << a.getEgrade() << std::endl << "Signing grade: " << a.getSgrade();
 	return (o);
+}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+	return ("grade is too high\n");
+}
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+	return ("grade is too low\n");
 }
