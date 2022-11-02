@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:17 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 02:24:12 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:37:43 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class RobotomyRequestForm:public Form
 		const int			e_grade;
 	public:
 		RobotomyRequestForm();
-		~RobotomyRequestForm();
+		virtual ~RobotomyRequestForm();
 		RobotomyRequestForm(RobotomyRequestForm const &a);
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm		&operator=(RobotomyRequestForm const &a);
