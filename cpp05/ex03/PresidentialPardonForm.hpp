@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:22 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/22 02:24:08 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:43:17 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,9 @@ class PresidentialPardonForm:public Form
 {
 	private:
 		std::string			target;
-		const int			s_grade;
-		const int			e_grade;
 	public:
 		PresidentialPardonForm();
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 		PresidentialPardonForm(PresidentialPardonForm const &a);
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm		&operator=(PresidentialPardonForm const &a);

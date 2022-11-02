@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:27 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 11:33:34 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:45:30 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm():target(""), s_grade(145), e_grade(137)
+ShrubberyCreationForm::ShrubberyCreationForm():Form("", 145, 137), target("")
 {
 	std::cout << "ShrubberyCreationForm Default Constructor" << std::endl;
 }
@@ -22,7 +22,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << "ShrubberyCreationForm Destructor" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &a):target(a.target), s_grade(a.s_grade), e_grade(a.e_grade)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &a):Form(a), target(a.target)
 {
 	std::cout << "ShrubberyCreationForm copy Constructor" << std::endl;
 }
@@ -34,14 +34,14 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target):target(target), s_grade(145), e_grade(137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form(target, 145, 137), target(target)
 {
 	std::cout << "ShrubberyCreationForm Parametrized Constructor" << std::endl;
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (!this->getSinged() || executor.getRange() > e_grade)
+	if (!this->getSinged() || executor.getRange() > getEgrade())
 		throw Form::GradeTooLowException();
 	std::ofstream fnr(this->target + "_shrubbery");
 	fnr <<  "                                               |"	<< std::endl;

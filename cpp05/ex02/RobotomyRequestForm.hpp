@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:50:17 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 12:37:43 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:43:11 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ class RobotomyRequestForm:public Form
 {
 	private:
 		std::string			target;
-		const int			s_grade;
-		const int			e_grade;
 	public:
 		RobotomyRequestForm();
 		virtual ~RobotomyRequestForm();

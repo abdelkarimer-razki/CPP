@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:32 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/10/30 15:20:55 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:50:06 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int main()
 	try
 	{
 		Intern someRandomIntern;
-		Bureaucrat a;
+		Bureaucrat a("karim", 50);
 		Form* rrf;
-		rrf = someRandomIntern.makeForm("presinsdfgdsfgdsfrdon", "Bender");
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		rrf->beSigned(a);
 		delete (rrf);	
 	}

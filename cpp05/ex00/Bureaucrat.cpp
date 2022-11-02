@@ -6,13 +6,13 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 09:37:39 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:38:50 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat():range(150)
+Bureaucrat::Bureaucrat()
 {
 	std::cout << "Bureaucrat default constructor" << std::endl;
 }
