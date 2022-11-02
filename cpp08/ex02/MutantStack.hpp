@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:52:57 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/01 13:55:23 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/02 08:59:20 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,29 @@ class MutantStack: public std::stack<T, myc >
 {
 	public:
 		typedef typename std::stack<T, myc>::container_type::iterator iterator;
+		iterator	&operator++()
+		{
+			this++;
+			return (*this);
+		};
+		iterator	operator++(int)
+		{
+			iterator tmp = this;
+			this++;
+			return (tmp);
+
+		};
+		iterator	&operator--()
+		{
+			this--;
+			return (*this);
+		};
+		iterator	operator--(int)
+		{
+			iterator tmp = this;
+			this--;
+			return (tmp);
+		};
 		iterator begin()
 		{
 			return	(this->c.begin());
