@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/03 17:00:39 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/03 17:01:53 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	Bureaucrat::getRange() const
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &a)
 {
-	this->name = a.name;
 	this->range = a.range;
 	return (*this);
 }
