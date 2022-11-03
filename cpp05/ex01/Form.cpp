@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:55 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 08:50:20 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:58:02 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,11 @@ int Form::getEgrade() const
 	return (this->e_grade);
 }
 
-void	Form::beSigned(Bureaucrat &a)
+void	Form::beSigned(Bureaucrat a)
 {
 	if (a.getRange() > s_grade)
-	{
-		a.signForm(*this);
 		throw Form::GradeTooLowException();	
-	}
 	_signed = true;
-	a.signForm(*this);
 }
 
 std::ostream	&operator<<(std::ostream &o, const Form &a)

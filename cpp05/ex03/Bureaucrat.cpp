@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 08:40:09 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/03 17:00:39 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,9 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat deconstructor" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &a)
+Bureaucrat::Bureaucrat(Bureaucrat const &a):name(a.name), range(a.range)
 {
 	std::cout << "Bureaucrat copy constructor" << std::endl;
-	*this = a;
 }
 
 std::string	Bureaucrat::getName() const
@@ -56,16 +55,16 @@ Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &a)
 
 void	Bureaucrat::incrementGrade()
 {
-	this->range--;
-	if (this->range < 1)
+	if (this->range == 1)
 		throw Bureaucrat::GradeTooHighException();
+	this->range--;
 }
 
 void	Bureaucrat::decrementGrade()
 {
-	this->range++;
-	if (this->range > 150)
+	if (this->range == 150)
 		throw Bureaucrat::GradeTooLowException();
+	this->range++;
 }
 
 std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)
@@ -76,10 +75,15 @@ std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)
 
 void	Bureaucrat::signForm(Form &a) const
 {
-	if (a.getSinged())
+	try
+	{
+		a.beSigned(*this);
 		std::cout << this->name << " signed " << a.getName() << std::endl;
-	else
+	}
+	catch (std::exception &e)
+	{
 		std::cout << this->name << " couldn’t sign " << a.getName() << " because grade is too low." << std::endl;
+	}
 }
 
 void 		Bureaucrat::executeForm(Form const & form)

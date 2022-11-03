@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:57 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 08:50:28 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:58:09 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Form
 		bool		getSinged() const;
 		int			getSgrade() const;
 		int			getEgrade() const;
-		void		beSigned(Bureaucrat &a);
+		void		beSigned(Bureaucrat a);
 	class GradeTooHighException:public std::exception
 	{
 		public:

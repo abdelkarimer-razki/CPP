@@ -6,7 +6,7 @@
 /*   By: aer-razk <aer-razk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:38:36 by aer-razk          #+#    #+#             */
-/*   Updated: 2022/11/02 14:38:50 by aer-razk         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:55:06 by aer-razk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,9 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat deconstructor" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &a)
+Bureaucrat::Bureaucrat(Bureaucrat const &a):name(a.name), range(a.range)
 {
 	std::cout << "Bureaucrat copy constructor" << std::endl;
-	*this = a;
 }
 
 std::string	Bureaucrat::getName() const
@@ -55,16 +54,16 @@ Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &a)
 
 void	Bureaucrat::incrementGrade()
 {
-	this->range--;
-	if (this->range < 1)
+	if (this->range == 1)
 		throw Bureaucrat::GradeTooHighException();
+	this->range--;
 }
 
 void	Bureaucrat::decrementGrade()
 {
-	this->range++;
-	if (this->range > 150)
+	if (this->range == 150)
 		throw Bureaucrat::GradeTooLowException();
+	this->range++;
 }
 
 std::ostream	&operator<<(std::ostream &o, const Bureaucrat &a)
